@@ -61,7 +61,6 @@ else
                 SDL2_PATH=/usr/lib/
                 # SDL2 library file
                 SDL2_LIB_SRC=libSDL2-2.0.so.0.16.0
-                SDL2_LIB=libSDL2-2.0.so.0
             else
                 # == RASPBERRY PI ==
                 PLATFORM=RPI
@@ -69,9 +68,9 @@ else
                 SDL2_PATH=/lib/arm-linux-gnueabihf/
                 # SDL2 library file
                 SDL2_LIB_SRC=libSDL2-2.0.so.0.9.0
-                SDL2_LIB=libSDL2-2.0.so.0
             endif
 
+            SDL2_LIB=libSDL2-2.0.so.0
             DEBUG_FLAGS=-lSDL2 -lm
             # add an -rpath so I can bundle the .so file with the app binary so users don't need to install SDL2
             RELEASE_FLAGS=${DEBUG_FLAGS} -Wl,-rpath,'$$ORIGIN'
